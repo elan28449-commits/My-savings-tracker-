@@ -1,4 +1,5 @@
-name: Build APK
+
+name: Build My Savings Tracker APK
 
 on:
   workflow_dispatch:
@@ -18,7 +19,7 @@ jobs:
         uses: actions/setup-java@v4
         with:
           distribution: temurin
-          java-version: 17
+          java-version: '17'
 
       - name: Build APK
         run: |
@@ -30,3 +31,4 @@ jobs:
         with:
           name: My-Savings-Tracker-APK
           path: app/build/outputs/apk/debug/*.apk
+          
